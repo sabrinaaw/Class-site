@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <!--CSS-->
+      <style>
+      body {
+        font-family: "bookman old style";
+      }
+      </style>
+      <!--JS-->
+    <script>
+      function showHex(){
+        var hex = document.querySelector("#color_hex_value"),
+          h1 = document.querySelector("h1");
+      
+        h1.style.color = document.querySelector("#color_picker").value;
+      }
+    </script>
+
+
+  </head>
+  <body>
+    <div class="conatiner">
+    
+    <!--HTML-->
+    Choose a color to color the below text
+    <input id="color_picker" type="color" onchange="showHex();">
+    <span> id="color_hex_value"></span>
+    <center><h1>DES 341</h1></center>
+
+
+    </div>
+  </body>
+</html>
