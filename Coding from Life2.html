@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<style>
+body {
+  --bg: #ace;
+  --mug: #eee;
+  --mug-light: #fff;
+  --mug-dark: #ddd;
+  --drink: #630;
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+  width: 25vmin;
+  height: 32.5vmin;
+  top: 55%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  border-radius: 100% 80% 90% 100%;
+  box-shadow: 
+    inset 0 0 0 5vmin var(--mug),
+    inset -2vmin 5.25vmin var(--mug-dark),
+    0 0 0 100vmax var(--bg),
+    inset 0 0 0 24vmin var(--bg);
+}
+
+body::before {
+  content: "";
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+  abackground: var(--drink);
+  width: 200%;
+  height: 200%;
+  border-radius: 100% / 15%;
+  top: -42.5%;
+  left: 74%;
+  box-shadow: 
+    inset 0 -56vmin var(--mug),
+    inset 0 0.5vmin var(--mug-light),
+    inset 0 -56.5vmin var(--mug-light),
+    inset 0 6.5vmin var(--mug-dark),
+    inset 0 -60vmin var(--drink),
+    -22.5vmin -2vmin 4vmin -22vmin var(--bg);
+}
+
+@keyframes moveshadow {
+  0%, 100% {
+    top: -105%;
+    background: #fff5;
+    box-shadow: 3vmin 0 0 -3vmin #fff7;
+  }
+  50% {
+    top: -110%;
+    background: #fff4;
+    box-shadow: 3vmin 0 0 -1.5vmin #fff7;
+  }
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+  width: 25%;
+  height: 82%;
+  background: #fff5;
+  left: 160%;
+  top: -105%;
+  filter: blur(2vmin);
+  border-radius: 100% 100% 0 0;
+  box-shadow: 3vmin 0 0 -3vmin #fff7;
+  animation: moveshadow 2s infinite;
+}
+
+</style>
+     
+      
+   
+                       
